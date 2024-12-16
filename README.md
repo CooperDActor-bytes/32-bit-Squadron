@@ -9,4 +9,4 @@ Moral355NG
 ### Artist
 Joquicx
 ### Mac Compiler
-Cooper D'Andilly [https://salty.cool](website)
+Cooper D'Andilly [His Website](https://salty.cool/)
