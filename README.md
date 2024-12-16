@@ -7,7 +7,8 @@ We have made a new UI which is made to support wider resolutions than previous v
 The window is now "RESIZABLE" because why not.
 ### Points Counter
 It's about time we added a point counter.
-![image](https://github.com/user-attachments/assets/852682f1-0de8-4775-aec6-733aabfb3f0e)
+![image](https://github.com/user-attachments/assets/50ce6a0c-c565-48bc-976c-882a49f03f0c)
+
 ## About this project
 A game where you dodge enemy aircraft over a randomly generated landscape.
 ## Credits
