@@ -8,3 +8,5 @@ A game where you dodge enemy aircraft over a randomly generated landscape.
 Moral355NG
 ### Artist
 Joquicx
+### Mac Compiler
+Cooper D'Andilly [https://salty.cool](website)
