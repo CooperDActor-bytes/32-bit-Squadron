@@ -32,8 +32,8 @@ while run:
         gamecredits = screen.blit(pygame.image.load("Assets/Credits.png"),(100,y / 2 + 10))
         gamequit = screen.blit(pygame.image.load("Assets/Quit.png"),(362,y / 2 + 10))
         screen.blit(pygame.image.load("Assets/32bit Squadron logo.png"),((x - 300) / 2 + 300,y / 2 - 250))
-        text("Points:",pygame.font.SysFont("Roboto",100),(255,255,255),100,y-100)
-        text(str(pts),pygame.font.SysFont("Roboto",100),(255,255,255),362,y-100)
+        text("Points:",pygame.font.SysFont("Bahnscript",100),(255,255,255),100,y-100)
+        text(str(pts),pygame.font.SysFont("Bahnscript",100),(255,255,255),352,y-100)
 
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -117,7 +117,7 @@ while run:
         screen.blit(pygame.image.load("Assets/Cloud 1.png"),(cx1,cy1))
         screen.blit(pygame.image.load("Assets/Cloud 2.png"),(cx2,cy2))
         screen.blit(pygame.image.load("Assets/Cloud 3.png"),(cx3,cy3))
-        text(str(pts),pygame.font.SysFont("Roboto",150),(255,255,255),10,10)
+        text(str(pts),pygame.font.SysFont("Bahnscript",150),(255,255,255),10,10)
 
         keys = pygame.key.get_pressed()
 
