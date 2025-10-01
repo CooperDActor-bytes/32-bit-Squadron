@@ -85,10 +85,10 @@ while run:
 
     if page == "credits":
         screen.fill((0,50,0))
-        pygame.draw.rect(screen,(80,80,80),pygame.Rect(0,0,700,y))
-        screen.blit(pygame.image.load("Assets/32bit Squadron logo.png"),((x - 300) / 2 + 300,y / 2 - 250))
-        screen.blit(pygame.image.load("Assets/Credits Scene.png"),((100),y / 2 - 235))
-        gamemenu = screen.blit(pygame.image.load("Assets/Main menu.png"),(100,y / 2 + 100))
+        pygame.draw.rect(screen,(70, 70, 70), pygame.Rect(0,  0, scaling* 700,  y))
+        screen.blit(pygame.transform.scale(pygame.image.load("Assets/32bit Squadron logo.png"), (scaling * 400, scaling * 400)), ((x - (scaling * 300)) / 2 + (scaling * 300),y / 2 - (scaling * 250)))
+        screen.blit(pygame.transform.scale(pygame.image.load("Assets/Credits Scene.png"), (scaling * 485, scaling * 282)),(scaling * 100,(y / 2 - (235 * scaling))))
+        gamemenu= screen.blit(pygame.transform.scale(pygame.image.load("Assets/Main menu.png"), (scaling * 500, scaling * 105)), (scaling * 100, (y / 2 + 100 * scaling)))
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 if gamemenu.collidepoint(event.pos):
