@@ -9,6 +9,5 @@ This update will involve porting the game from pygame to godot in the first stag
 Moral355NG 
 ### Artwork
 Joquicx
-### Animations
-Joquicx
-Moral355NG
+### Animation
+Joquicx, Moral355NG
