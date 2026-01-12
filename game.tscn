@@ -1,0 +1,326 @@
+[gd_scene load_steps=30 format=3 uid="uid://d1ehpktklfnuq"]
+
+[ext_resource type="Script" uid="uid://dm22sx1ro1quy" path="res://player.gd" id="1_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://4dlo6wt16060" path="res://Assets/Enemies.png" id="1_feb5d"]
+[ext_resource type="Texture2D" uid="uid://2170l0yp64vi" path="res://Assets/Player.png" id="2_feb5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
+size = Vector2(1152, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
+size = Vector2(1152, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5wjh"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vef74"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hve3p"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfdv2"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotsf"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc2xo"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_215e1"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sc4i"]
+atlas = ExtResource("1_feb5d")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80cx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5wjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vef74")
+}],
+"loop": true,
+"name": &"avro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hve3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfdv2")
+}],
+"loop": true,
+"name": &"bomber",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iotsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc2xo")
+}],
+"loop": true,
+"name": &"messerschmitt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_215e1")
+}],
+"loop": true,
+"name": &"tomcat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sc4i")
+}],
+"loop": true,
+"name": &"warthog",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8heu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvswv"]
+size = Vector2(15, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_boyg6"]
+size = Vector2(10, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc0e3"]
+size = Vector2(9, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
+atlas = ExtResource("2_feb5d")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feb5d"]
+atlas = ExtResource("2_feb5d")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc0e3"]
+atlas = ExtResource("2_feb5d")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jktm"]
+atlas = ExtResource("2_feb5d")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryrav"]
+atlas = ExtResource("2_feb5d")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eow3j"]
+atlas = ExtResource("2_feb5d")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hve3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2o6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feb5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc0e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jktm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryrav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eow3j")
+}],
+"loop": true,
+"name": &"cycle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2o6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feb5d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryrav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eow3j")
+}],
+"loop": true,
+"name": &"turning",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e36ub"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2o6t"]
+
+[sub_resource type="Gradient" id="Gradient_feb5d"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fc0e3"]
+gradient = SubResource("Gradient_feb5d")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.6056604)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Environment" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Environment"]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.19607843, 0, 1)
+
+[node name="Floor" type="CollisionShape2D" parent="Environment"]
+position = Vector2(576, 648)
+shape = SubResource("RectangleShape2D_e2o6t")
+
+[node name="Right Wall" type="CollisionShape2D" parent="Environment"]
+position = Vector2(1152, 324)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_e2o6t")
+
+[node name="Left Wall" type="CollisionShape2D" parent="Environment"]
+position = Vector2(0, 324)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_e2o6t")
+
+[node name="Kill Block" type="StaticBody2D" parent="."]
+position = Vector2(576, 900)
+collision_layer = 2
+
+[node name="Kill Block" type="CollisionShape2D" parent="Kill Block"]
+shape = SubResource("RectangleShape2D_feb5d")
+
+[node name="Enemy" type="RigidBody2D" parent="."]
+position = Vector2(576, -100)
+collision_layer = 2
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
+texture_filter = 1
+position = Vector2(0, 2)
+sprite_frames = SubResource("SpriteFrames_80cx4")
+animation = &"avro"
+autoplay = "avro"
+
+[node name="Fuleselage" type="CollisionShape2D" parent="Enemy"]
+scale = Vector2(1, 3.2)
+shape = SubResource("CapsuleShape2D_e8heu")
+
+[node name="Wings" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(0, 14.5)
+rotation = 1.5707964
+scale = Vector2(1.2, 3.2)
+shape = SubResource("RectangleShape2D_rvswv")
+
+[node name="Stabiliser" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(0, -45)
+rotation = 1.5707964
+scale = Vector2(0.7, 1.9)
+shape = SubResource("RectangleShape2D_boyg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(-26, 30)
+shape = SubResource("RectangleShape2D_fc0e3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(27, 30)
+shape = SubResource("RectangleShape2D_fc0e3")
+
+[node name="Enemy2" type="RigidBody2D" parent="."]
+position = Vector2(618, -198)
+collision_layer = 2
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy2"]
+texture_filter = 1
+position = Vector2(0, 2)
+sprite_frames = SubResource("SpriteFrames_80cx4")
+animation = &"bomber"
+autoplay = "bomber"
+
+[node name="Fuleselage" type="CollisionShape2D" parent="Enemy2"]
+scale = Vector2(1, 3.2)
+shape = SubResource("CapsuleShape2D_e8heu")
+
+[node name="Wings" type="CollisionShape2D" parent="Enemy2"]
+position = Vector2(0, 14.5)
+rotation = 1.5707964
+scale = Vector2(1.2, 3.2)
+shape = SubResource("RectangleShape2D_rvswv")
+
+[node name="Stabiliser" type="CollisionShape2D" parent="Enemy2"]
+position = Vector2(0, -45)
+rotation = 1.5707964
+scale = Vector2(0.7, 1.9)
+shape = SubResource("RectangleShape2D_boyg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+position = Vector2(-26, 30)
+shape = SubResource("RectangleShape2D_fc0e3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy2"]
+position = Vector2(27, 30)
+shape = SubResource("RectangleShape2D_fc0e3")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(576, 598)
+collision_layer = 3
+script = ExtResource("1_e2o6t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_hve3p")
+animation = &"cycle"
+autoplay = "default"
+
+[node name="Fuleselage" type="CollisionShape2D" parent="Player"]
+scale = Vector2(1, 3.2)
+shape = SubResource("CapsuleShape2D_e36ub")
+
+[node name="Wings" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -12)
+rotation = 1.5707964
+scale = Vector2(1.2, 3.2)
+shape = SubResource("CapsuleShape2D_e2o6t")
+
+[node name="Stabiliser" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 40)
+rotation = 1.5707964
+scale = Vector2(0.7, 1.9)
+shape = SubResource("CapsuleShape2D_e2o6t")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+energy = 0.5
+texture = SubResource("GradientTexture2D_fc0e3")
