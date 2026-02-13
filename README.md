@@ -1,11 +1,12 @@
-# 32-bit Squadron
-32-bit squadron is a game where you brave the hostile skies in your trusty Cessna weaving left to right as bullets swish past you as you simultaniously avoid collison with other aircraft.
+<img width="1280" height="128" alt="Banner" src="https://github.com/user-attachments/assets/729be532-afbf-4e39-b0c5-e5eca38b6cf6" />
 
-![image](https://github.com/user-attachments/assets/bad25fc2-1bb5-4fa0-86cd-0e6c2e32e429)
+32-bit squadron is a game where you brave the hostile skies in your trusty Cessna weaving left to right as bullets swish past you at close range.
+
 ## Credits
 ### Programming
 Moral355NG 
 ### Artwork
+
 Joquicx
 ### Animation
 Joquicx, Moral355NG
