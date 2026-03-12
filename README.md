@@ -10,5 +10,5 @@ The entire game will be recoded in the Go programming language for better perfor
   - **Joquicx:** Animation, Artwork
   - **Moral355NG:** Animation, Programming
 - ### Frameworks
-    - **Pygame-CE (v0.1.0-v1.0.1)** https://github.com/pygame-community/pygame-ce
-    - **Ebitengine (v1.1.0+ WIP)** https://github.com/hajimehoshi/ebiten
+    - **Pygame-CE (v0.1.0-v1.0.1):** https://github.com/pygame-community/pygame-ce
+    - **Ebitengine (v1.1.0+ WIP):** https://github.com/hajimehoshi/ebiten
