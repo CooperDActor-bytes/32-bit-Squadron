@@ -4,23 +4,23 @@ pygame.init()
 pygame.display.set_icon(pygame.image.load("Assets/32bit Squadron logo.png"))
 pygame.display.set_caption("32-bit Squadron") 
 
-screen = screen = pygame.display.set_mode((pygame.display.Info().current_w / 2, pygame.display.Info().current_h / 2),pygame.RESIZABLE)
+screen = pygame.display.set_mode((pygame.display.Info().current_w / 2, pygame.display.Info().current_h / 2),pygame.RESIZABLE)
 run = True
 page = "menu"
 pts = 0
 keys = pygame.key.get_pressed()
 prev_time = time.time()
 
-def text(text,font,txtcol,txx,txy):
-    txtsprite = font.render(text,True,txtcol)
-    screen.blit(txtsprite,(txx,txy))
+def text(text,font,color,x,y):
+    txtsprite = font.render(text,True,color)
+    screen.blit(txtsprite,(x,y))
 
 while run:
     x,y = screen.get_width(),screen.get_height()
     curr_time = time.time()
     delta_time = curr_time - prev_time
     prev_time = curr_time
-    spvel = y / 720 * 1000 * delta_time
+    spvel = y / 720 * 800 * delta_time
     vel = y / 720 * 600 * delta_time
     scaling = (x + y) / (1280 + 720)
     fontsize = int(scaling * 70)
@@ -40,8 +40,8 @@ while run:
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                 if gamestart.collidepoint(event.pos):
                     playersprite = "Assets/Player.png"
-                    px = x / 2 - 40
-                    py = y - 100
+                    px = x / 2 - 50 * scaling
+                    py = y - 100 * scaling
                     cx1 = random.randint(0, x-80)
                     cy1 = random.randint(-1000,0)
                     cx2 = random.randint(0, x-80)
