@@ -27,6 +27,7 @@ func main() {
 	ebiten.SetWindowSize(1280, 720)
 	ebiten.SetWindowTitle("32-bit Squadron")
 	ebiten.SetWindowResizingMode(ebiten.WindowResizingModeEnabled)
+	// main game loop
 	if err := ebiten.RunGame(&Game{}); err != nil {
 		log.Fatal(err)
 	}
