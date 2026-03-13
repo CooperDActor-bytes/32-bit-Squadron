@@ -2,11 +2,26 @@ package main
 
 import (
 	"image/color"
+	_ "image/png"
 	"log"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 )
+
+var (
+	player  *ebiten.Image
+	enemies *ebiten.Image
+)
+
+func init() {
+	var err error
+	player, _, err = ebitenutil.NewImageFromFile("assets/player.png")
+	enemies, _, err = ebitenutil.NewImageFromFile("assets/enemies.png")
+	if err != nil {
+		log.Fatal(err)
+	}
+}
 
 type Game struct{}
 
@@ -16,7 +31,10 @@ func (g *Game) Update() error {
 
 func (g *Game) Draw(screen *ebiten.Image) {
 	screen.Fill(color.RGBA{0, 50, 0, 255})
+	ebiten.NewImage(100, 100)
 	ebitenutil.DebugPrint(screen, "v1.1.0-Alpha1")
+	screen.DrawImage(enemies, nil)
+	screen.DrawImage(player, nil)
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
