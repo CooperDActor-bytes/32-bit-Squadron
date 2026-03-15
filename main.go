@@ -12,6 +12,7 @@ import (
 var (
 	player  *ebiten.Image
 	enemies *ebiten.Image
+	scaling float64 = 1
 )
 
 func init() {
@@ -30,11 +31,18 @@ func (g *Game) Update() error {
 }
 
 func (g *Game) Draw(screen *ebiten.Image) {
+	player_op := &ebiten.DrawImageOptions{}
+	player_op.GeoM.Translate(100, 100)
+	player_op.GeoM.Scale(1*scaling, 1*scaling)
+	enemy_op := &ebiten.DrawImageOptions{}
+	enemy_op.GeoM.Translate(200, 200)
+	enemy_op.GeoM.Scale(1*scaling, 1*scaling)
+
+	// equations for player poition px = x / 2 - 50 * scaling py = y - 100 * scaling
 	screen.Fill(color.RGBA{0, 50, 0, 255})
-	ebiten.NewImage(100, 100)
 	ebitenutil.DebugPrint(screen, "v1.1.0-Alpha1")
-	screen.DrawImage(enemies, nil)
-	screen.DrawImage(player, nil)
+	screen.DrawImage(enemies, enemy_op)
+	screen.DrawImage(player, player_op)
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
@@ -42,7 +50,7 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeigh
 }
 
 func main() {
-	ebiten.SetWindowSize(1280, 720)
+	ebiten.SetWindowSize(960, 540)
 	ebiten.SetWindowTitle("32-bit Squadron")
 	ebiten.SetWindowResizingMode(ebiten.WindowResizingModeEnabled)
 	// main game loop
