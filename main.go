@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bytes"
+	"embed"
+	"image"
 	"image/color"
 	_ "image/png"
 	"log"
@@ -9,19 +12,30 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 )
 
+//go:embed assets/*
+var assets embed.FS
+
 var (
 	player  *ebiten.Image
 	enemies *ebiten.Image
 	scaling float64 = 1
 )
-
 func init() {
-	var err error
-	player, _, err = ebitenutil.NewImageFromFile("assets/player.png")
-	enemies, _, err = ebitenutil.NewImageFromFile("assets/enemies.png")
+	// Load Player
+	playerData, err := assets.ReadFile("assets/player.png")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("failed to load player: ", err)
 	}
+	imgP, _, _ := image.Decode(bytes.NewReader(playerData))
+	player = ebiten.NewImageFromImage(imgP)
+
+	// Load Enemies
+	enemyData, err := assets.ReadFile("assets/enemies.png")
+	if err != nil {
+		log.Fatal("failed to load enemies: ", err)
+	}
+	imgE, _, _ := image.Decode(bytes.NewReader(enemyData))
+	enemies = ebiten.NewImageFromImage(imgE)
 }
 
 type Game struct{}
@@ -53,7 +67,14 @@ func main() {
 	ebiten.SetWindowSize(960, 540)
 	ebiten.SetWindowTitle("32-bit Squadron")
 	ebiten.SetWindowResizingMode(ebiten.WindowResizingModeEnabled)
-	// main game loop
+
+	iconData, err := assets.ReadFile("assets/32bit Squadron logo.png")
+	if err == nil {
+		img, _, _ := image.Decode(bytes.NewReader(iconData))
+		ebiten.SetWindowIcon([]image.Image{img})
+	}
+	// ---------------------------
+
 	if err := ebiten.RunGame(&Game{}); err != nil {
 		log.Fatal(err)
 	}
